@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product,Order,OrderItem
 
 # Register your models here.
 class CategoryAdmin(admin.ModelAdmin):
@@ -13,3 +13,7 @@ class ProductAdmin(admin.ModelAdmin):
     list_editable = ['price','stock','available']
     prepopoluated_fields = {'slug': ('name',)}
 admin.site.register(Product,ProductAdmin)
+
+class OrderItemInline(admin.TabularInline):
+    model = OrderItem
+    raw_id_fields = ['product']

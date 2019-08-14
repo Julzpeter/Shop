@@ -1,11 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
 body {
     margin: 0;
     padding: 0;
     font-family: helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: normal;
 }
@@ -19,7 +25,8 @@ a:hover {
     color: #77b6e2;
 }
 
-a.button, input[type="submit"] {
+a.button,
+input[type="submit"] {
     color: #fff;
     background: #5993bb;
     border-radius: 4px;
@@ -47,7 +54,8 @@ table {
     border-collapse: collapse;
 }
 
-table th, table td {
+table th,
+table td {
     text-align: left;
     font-size: 14px;
     padding: 10px;
@@ -62,7 +70,8 @@ tbody tr.subtotal {
     background: #ccc;
 }
 
-thead th, tbody tr.total {
+thead th,
+tbody tr.total {
     background: #5993bb;
     color: #fff;
     font-weight: bold;
@@ -85,7 +94,8 @@ td input[type="submit"] {
     padding: 4px 10px;
 }
 
-form p label, form p input {
+form p label,
+form p input {
     float: left;
     clear: both;
 }
@@ -114,6 +124,7 @@ ul.errorlist {
     margin: 0;
     padding: 0;
 }
+
 
 #header {
     padding: 10px 100px;
