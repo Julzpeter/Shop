@@ -3,6 +3,7 @@ from django.views.decorators.http import require_POST
 from .cart import Cart
 from .forms import CartAddProductForm
 from shop.models import Product
+
 # Create your views here.
 @require_POST
 def cart_add(request, product_id):
