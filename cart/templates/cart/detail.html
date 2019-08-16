@@ -24,20 +24,19 @@ Your shopping cart
         <tr>
             <td>
                 <a href="{{ product.get_absolute_url }}">
-                    <img
-                        src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %} style="
+                        height: 200;"">
                 </a>
             </td>
             <td>{{ product.name }}</td>
             <td>
-                <form action="{% url "cart:cart_add" product.id %}" method="post">
+                <form action='{% url "cart:cart_add" product.id %}' method="post">
                     {{ item.update_quantity_form.quantity }}
-                    {{ item.update_quantity_form.update }}
                     <input type="submit" value="Update">
                     {% csrf_token %}
                 </form>
             </td>
-            <td><a href="{% url "cart:cart_remove" product.id %}">Remove</a></td>
+            <td><a href='{% url "cart:cart_remove" product.id %}'>Remove</a></td>
             <td class="num">${{ item.price }}</td>
             <td class="num">${{ item.total_price }}</td>
         </tr>
@@ -51,8 +50,7 @@ Your shopping cart
     </tbody>
 </table>
 <p class="text-right">
-    <a href="{% url "shop:product_list" %}" class="button light">Continue shopping</a>
-    <a href='{% url "orders:order_create" %}' class='button'>Checkout</a>
-    </p>
-
-    {% endblock %}
+    <a href='{% url "shop:product_list" %}' class="button light">Continue shopping</a>
+    <a href='{% url "orders:order_create" %}' class="button">Checkout</a>
+</p>
+{% endblock %}
